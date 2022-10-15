@@ -1,8 +1,8 @@
 import openpyxl
 from openpyxl import workbook, load_workbook
 wb = openpyxl.load_workbook("Emails.xlsx")
-sheet1 = wb['Email']
-wb.create_sheet("Email_guesses")
+sheet1 = wb['Input']
+wb.create_sheet("Output")
 sh = wb["Email_guesses"]
 sh['A1'].value = "Name"
 sh['B1'].value = "First guess"
