@@ -1,15 +1,11 @@
-Info:
-Email ID Generator is a python code which guesses the mail IDs of the prospects when First Name, Last Name and Domain is given as an input.
+# Email--Generator
 
-Libraries Used:
-1.Openpyxl
+The Email ID Generator is a Python code that generates potential email IDs for prospects based on their first name, last name, and domain name. The libraries utilized in this code include Openpyxl.
 
-Process:
-1.This is coded in a way such that the input is automaticaaly pulled from an excel where prospect name and domain names are given. 
-2.In case domain name is not found there is an additional column where prospect's company website is given, code will look for that column and pull out a domain name from company website.
-3.If there is more than first namd eand last name for a prospect(Middle name is included), code will execute a string manipulation and detects the first and last name alone and then proceeds further.
-4.Once input(First Name, Last Name and Domain Name) is in place now again with the help of string manipulation code will generate six possible guesses.
+The process involves the following steps:
 
-Output:
-As mentioned above this coe will generate six possible guesses and store it in a separate excel in a same workbook-where input is taken from.
-
+The input data is automatically pulled from an Excel sheet containing prospect names and domain names.
+In the event that the domain name is not found, the code will reference an additional column in the Excel sheet that contains the prospect's company website and extract the domain name from it.
+If the prospect has a middle name in addition to their first and last name, the code will use string manipulation to identify just the first and last name and proceed with the process.
+With the first name, last name, and domain name in place, the code will then use string manipulation to generate six potential email ID guesses.
+The output of this code is the generation of six potential email ID guesses, which are stored in a separate sheet within the same workbook as the input data.
