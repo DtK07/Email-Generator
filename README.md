@@ -1,11 +1,11 @@
-# Email--Generator
+# Email--Validator
 
-The Email ID Generator is a Python code that generates potential email IDs for prospects based on their first name, last name, and domain name. The libraries utilized in this code include Openpyxl.
+The Email Validator is a tool that validates the email addresses of prospects by sending an automated email and detecting hard bounces. The libraries used in this tool include Pandas, os, Openpyxl, smtplib, imaplib, time, and email.
 
 The process involves the following steps:
 
-The input data is automatically pulled from an Excel sheet containing prospect names and domain names.
-In the event that the domain name is not found, the code will reference an additional column in the Excel sheet that contains the prospect's company website and extract the domain name from it.
-If the prospect has a middle name in addition to their first and last name, the code will use string manipulation to identify just the first and last name and proceed with the process.
-With the first name, last name, and domain name in place, the code will then use string manipulation to generate six potential email ID guesses.
-The output of this code is the generation of six potential email ID guesses, which are stored in a separate sheet within the same workbook as the input data.
+The sender account must be set up before sending any emails. This account can be from any email provider (such as Gmail, Outlook, Hotmail, etc.).
+An environmental variable should be created for the sender account for security purposes.
+A list of email addresses to be validated should be added to an Excel sheet.
+Upon execution of the code, the tool will automatically send emails to the addresses listed in the Excel sheet and then wait for a specified amount of time. Afterward, it will open the email account and check for any hard bounces and return the validated email addresses.
+Finally, the tool will clean up the email account in preparation for the next execution.
